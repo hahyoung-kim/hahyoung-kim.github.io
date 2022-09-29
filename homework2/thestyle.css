@@ -1,0 +1,48 @@
+@font-face {
+    src:url(font/Chalk-Regular.ttf);
+    font-family: chalk;
+}
+
+.main {
+    font-size: 150%;
+    padding: 1%;
+    text-align: center;
+    font-family: 'chalk', chalk;
+    color: lightskyblue; 
+
+}
+
+.heading {
+    font-size: 250%;
+    padding: 1%;
+    text-align: center;
+    font-family: 'chalk', chalk;
+    color: rgb(56, 146, 201); 
+
+}
+
+
+.subheading {
+    font-size: 150%;
+    padding: 1%;
+    text-align: center;
+    font-family: 'chalk', chalk;
+    color: lightskyblue; 
+
+}
+
+#subheading2 {
+    display: flex;
+    align-items: center;
+    font-size: 120%;
+    padding: 7%;
+    font-family: 'chalk', chalk;
+    color: lightskyblue; 
+
+}
+
+#subheading_img{
+    margin-right: 50px;
+}
+
+

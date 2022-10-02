@@ -1,69 +1,102 @@
-@font-face {
-    src:url(chalk/Chalk-Regular.ttf);
+@font-face { 
+    src:url(fonts/chalk/Chalk-Regular.ttf);
     font-family: chalk;
-}
-.main {
-    font-size: 150%;
-    font-family: 'chalk', chalk;
-    color: lightskyblue; 
 
-}
+    src: url(fonts/Carrois_Gothic/CarroisGothic-Regular.ttf);
+    font-family: carrois;
 
-#Playlist {
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 10px;
-    font-size: 140%;
-    padding: 5%;
-    font-family: 'chalk', chalk;
-    color: black; 
+    src: url(fonts/Merriweather_Sans/MerriweatherSans.ttf);
+    font-family: merriweather;
+    
+    src: url(fonts/Apparel-Font-Family/Demo_Fonts/Fontspring-DEMO-apparel-boldit.otf);
+    font-family: aItalic;
 
+    src: url(fonts/apparel-bold/Apparel\ Bold.ttf);
+    font-family: apparelBold;
 }
 
-a {
-    color: lightskyblue;
-    transition: background-color 0.5s;
-  }
-  
-  a:hover {
+/* top container*/
+.container1{
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; 
+    background-color: #C8DAE0;
+    width: 100%;
+    height: 70%;
+}
+
+.containerHeader{
+    font-family: aItalic;
+    color: white; 
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.heading2{
+    text-align: center;
+    font-family: chalk;
+    font-size: 30px;
+    padding: 20px;
     color: white;
-    background-color: lightcoral;
-  }
-
-#headingText {
-    font-size: 160%;
-    padding: 1%;
-    text-align: center;
-    font-family: 'chalk', chalk;
-    color: lightcoral; 
-
 }
 
-#heading2 {
-    display: flex;
-    align-items: center;
-    font-size: 200%;
-    padding: 5%;
-    text-align: center;
-    font-family: 'chalk', chalk;
-    color: plum; 
 
+/* bottom container*/
+.container2{
+    position: relative;
+    background-color: #F7F7F7;
+    width: 100%;
 }
 
-#subheading2 {
-    display: flex;
-    align-items: center;
-    font-size: 120%;
-    padding: 5%;
-    text-align: center;
-    font-family: 'chalk', chalk;
-    color: plum; 
 
+.wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 1000px;
+    margin: auto;
 }
 
-#body2{
-    font-size: 120%;
+.box{
+    border-radius: 10px;
+}
+
+
+img{
+    width:100%;
+    height: 220px;
+}
+
+.text{
     text-align: left;
-    font-family: 'chalk', chalk;
-    color: lightskyblue; 
+    color:#6A6969;
+    font-family: aItalic;
+
 }
+
+
+
+h1{
+
+    font-size:80px;
+    color:#6A6969;
+    font-family: apparelBold;
+
+}
+
+h2{
+    font-size:30px;
+    color:#6A6969;
+    font-family: apparelBold;
+}
+
+
+p{
+    font-size:20px;
+    font-family: merriweather;
+
+}
+
+
+

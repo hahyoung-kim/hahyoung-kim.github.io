@@ -75,7 +75,12 @@ img{
 
 }
 
-
+.updateBox{
+    color:#6A6969;
+    font-size: 30px;
+    font-family: chalk;
+    text-align: center;
+}
 
 h1{
 
@@ -98,5 +103,16 @@ p{
 
 }
 
+
+h4{
+    color:#6A6969;
+    font-size: 30px;
+    font-family: chalk;
+    position: absolute; 
+    top: 820; 
+    right: 310px; 
+
+    
+}
 
 

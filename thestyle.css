@@ -52,6 +52,7 @@
 }
 
 
+
 .wrap{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -62,6 +63,16 @@
 
 .box{
     border-radius: 10px;
+    transition: 1s;
+
+}
+
+.box:hover{
+    transform: scale(1.2);
+    background: #e0c8d2;
+    z-index: 2;
+    box-shadow: 5px 5px 5px #C8DAE0;
+  
     
 }
 

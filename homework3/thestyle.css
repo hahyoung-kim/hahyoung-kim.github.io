@@ -12,35 +12,15 @@
 
 }
 
-.heading {
-    font-size: 250%;
-    padding: 1%;
-    text-align: center;
-    font-family: chalk;
-    color: rgb(56, 146, 201); 
-
-}
-
-
-.subheading {
-    font-size: 150%;
-    padding: 1%;
-    text-align: center;
-    font-family:  chalk;
-    color: lightskyblue; 
-
-}
-
-#subheading2 {
+#Playlist{
     display: flex;
     align-items: center;
+    text-align: left;
     font-size: 120%;
     padding: 7%;
     font-family: chalk;
-    color: lightskyblue; 
-
-}
-
-#subheading_img{
+    color: black; 
     margin-right: 50px;
+    padding: 5%;
+
 }

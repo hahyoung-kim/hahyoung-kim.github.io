@@ -62,7 +62,7 @@
     perspective: 1000px; 
   }
   
-  /* This container is needed to position the front and back side */
+  /* position the front and back of flip card */
   .flip-card-inner {
     grid-column: 1;
     grid-row: 1;

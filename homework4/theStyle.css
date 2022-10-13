@@ -1,0 +1,143 @@
+@font-face { 
+  src:url(fonts/FjallaOne-Regular.ttf);
+  font-family: fjallaOne;
+}
+
+.header{
+  font-family: timonium;
+  font-style: bold;
+  color: pink;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 0.7fr 0.3fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+
+.container1{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.container1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.txtContainer1{
+  position: absolute;
+  color: black;
+  top: 200px;
+  left: 30px;
+  font-size: 13px;
+  text-align: left;
+  font-family: fjallaOne;
+  background-color: rgba(255, 255, 255, 0.321);
+  
+  
+}
+
+.header{
+  display: flex;
+  color: white;
+  background-color: rgb(47, 46, 46);
+  font-size: 15px;
+  justify-content: center;
+  font-family: fjallaOne;
+}
+
+.container2{
+  grid-column: 2;
+  grid-row: 1;
+  font-family: roc-grotesk; 
+  font-weight: 15px;
+}
+
+
+.flip-card {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding-top: 20px;
+    width: 376px;
+    height: 211px;
+    perspective: 1000px; 
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  /* flipping card on hover*/
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* front of flip card*/
+  .front {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: white;
+    color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* back of flip card */
+  .back {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: white;
+    color: rgb(47, 46, 46);
+    transform: rotateY(180deg);
+    
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+  .container3{
+    grid-column-start: 1;
+    grid-column-start: 2;
+    grid-row: 2;
+    font-family: timonium;
+    font-style: italic;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    background-color:rgba(184, 101, 101, 0.466);
+  }
+  
+  
+  #video {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  
+  /* credits:
+     flip card: https://www.w3schools.com/howto/howto_css_flip_card.asp
+  */

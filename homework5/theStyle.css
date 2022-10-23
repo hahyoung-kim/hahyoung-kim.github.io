@@ -1,0 +1,306 @@
+body {
+    background: url("winter.jpg");
+    background-size: 100%;
+}
+
+.snowflakes {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    text-shadow: 0 0 3px white;
+  }
+
+.snow{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+
+@keyframes fall {
+    from {
+        transform: translateY(-100px) rotateZ(360deg);
+    }
+    to {
+        transform: translateY(1100px);
+    }
+    
+  }
+
+.snowflake1{
+    font-size: 5em;
+    animation-name: fall;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+}
+
+.snowflake2{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 8.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake3{
+    font-size: 4em;
+    animation-name: fall;
+    animation-duration: 12.3s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake4{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake5{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake6{
+    font-size: 5em;
+
+    animation-name: fall;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+
+}
+
+
+.snowflake7{
+    font-size: 3em;
+
+    animation-name: fall;
+    animation-duration: 9.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake8{
+    font-size: 3em;
+
+    animation-name: fall;
+    animation-duration: 11.7s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake9{
+    font-size: 3em;
+
+    animation-name: fall;
+    animation-duration: 10.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake10{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 11.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake10{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 11.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake11{
+    font-size: 5em;
+    animation-name: fall;
+    animation-duration: 10.7s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake12{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 11.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake13{
+    font-size: 4em;
+    animation-name: fall;
+    animation-duration: 9.8s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake14{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 9.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.snowflake15{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+
+}
+
+.minisnowflake1{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 11.5s;
+    animation-iteration-count: infinite;
+
+}
+
+.minisnowflake2{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+}
+
+.minisnowflake3{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+.minisnowflake4{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+
+}
+
+.minisnowflake5{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 11.5s;
+    animation-iteration-count: infinite;
+
+}
+.minisnowflake6{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+.minisnowflake7{
+    font-size: 1em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+
+}
+.minisnowflake8{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+}
+.minisnowflake9{
+    font-size: 3em;
+    animation-name: fall;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+
+}
+.minisnowflake10{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake11{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake12{
+    font-size: 1em;
+    animation-name: fall;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake13{
+    font-size: 1em;
+    animation-name: fall;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake14{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake15{
+    font-size: 1em;
+    animation-name: fall;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake16{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake17{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake18{
+    font-size: 1.5em;
+    animation-name: fall;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake19{
+    font-size: 1em;
+    animation-name: fall;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+}
+
+.minisnowflake20{
+    font-size: 2em;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+

@@ -64,14 +64,16 @@
 .box{
     border-radius: 10px;
     transition: 1s;
+    position: relative;
 
 }
 
 .box:hover{
     transform: scale(1.2);
-    background: #e0c8d2;
+    background: #d1e7ff;
     z-index: 2;
-    box-shadow: 5px 5px 5px #C8DAE0;
+    box-shadow: 5px 5px 5px #9fceff;
+    position: relative;
   
     
 }
@@ -80,6 +82,7 @@
 img{
     width:100%;
     height: 220px;
+    position: relative;
 }
 
 .text{

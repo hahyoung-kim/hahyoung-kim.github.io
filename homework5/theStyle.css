@@ -145,7 +145,7 @@ body {
 }
 
 .snowflake14{
-    font-size: 3em;
+    font-size: 1em;
     animation-name: fall;
     animation-duration: 9.5s;
     animation-iteration-count: infinite;

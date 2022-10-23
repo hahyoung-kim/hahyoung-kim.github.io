@@ -1,6 +1,8 @@
 body {
     background: url("winter.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .snowflakes {
@@ -200,7 +202,7 @@ body {
 
 }
 .minisnowflake6{
-    font-size: 3em;
+    font-size: 1.5em;
     animation-name: fall;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -221,7 +223,7 @@ body {
 
 }
 .minisnowflake9{
-    font-size: 3em;
+    font-size: 2em;
     animation-name: fall;
     animation-duration: 9s;
     animation-iteration-count: infinite;

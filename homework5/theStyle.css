@@ -7,7 +7,7 @@ body {
 
 .snowflakes {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     color: white;
     text-shadow: 0 0 3px white;
   }

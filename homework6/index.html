@@ -1,52 +1,413 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Net.Art</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./theStyle.css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
 
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" href="./style.css">
+  <title>CODY</title>
+  <style type="text/css" media="screen">
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Lucida Grande', Verdana, Arial;
+      font-size: 12px;
+      background-image: -webkit-gradient(radial,
+                            50% 500, 1,
+                            50% 500, 400,
+                            from(rgba(255, 255, 255, 0.3)),
+                            to(rgba(255, 255, 255, 0)));
+     background-repeat: no-repeat;
+    }
+
+    #container {
+      width: 100%;
+      height: 700px;
+      -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+      -webkit-perspective-origin: 50% 225px;
+    }
+    #stage {
+      width: 100%;
+      height: 100%;
+      -webkit-transition: -webkit-transform 2s;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    #shape {
+      position: relative;
+      top: 160px;
+      margin: 0 auto;
+      height: 200px;
+      width: 200px;
+      -webkit-transform-style: preserve-3d;
+    }
+    
+    .plane {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      border: 1px solid white;
+      -webkit-border-radius: 12px;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 124pt;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: hidden;
+    }
+
+    #shape.backfaces .plane {
+      -webkit-backface-visibility: visible;
+    }
+    
+    #shape {
+      /*rotateSpeed*/
+      -webkit-animation: spin 16s infinite linear;
+    }
+
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(-360deg); }
+    }
+
+    /* ---------- cube styles ------------- */
+    .cube > .one {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+    }
+
+    .cube > .two {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+    }
+
+    .cube > .three {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .four {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .five {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .six {
+      opacity: 0.5;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+    }
+
+
+    .cube > .seven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+    }
+
+    .cube > .eight {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) translateZ(100px);
+    }
+
+    .cube > .nine {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(90deg) translateZ(100px);
+    }
+
+    .cube > .ten {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(180deg) translateZ(100px);
+    }
+
+    .cube > .eleven {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateY(-90deg) translateZ(100px);
+    }
+
+    .cube > .twelve {
+      -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
+    }
+
+    /* ---------- ring styles ------------- */
+    .ring > .one {
+      -webkit-transform: translateZ(380px);
+    }
+
+    .ring > .two {
+      -webkit-transform: rotateY(30deg) translateZ(380px);
+    }
+
+    .ring > .three {
+      -webkit-transform: rotateY(60deg) translateZ(380px);
+    }
+
+    .ring > .four {
+      -webkit-transform: rotateY(90deg) translateZ(380px);
+    }
+
+    .ring > .five {
+      -webkit-transform: rotateY(120deg) translateZ(380px);
+    }
+
+    .ring > .six {
+      -webkit-transform: rotateY(150deg) translateZ(380px);
+    }
+
+    .ring > .seven {
+      -webkit-transform: rotateY(180deg) translateZ(380px);
+    }
+
+    .ring > .eight {
+      -webkit-transform: rotateY(210deg) translateZ(380px);
+    }
+
+    .ring > .nine {
+      -webkit-transform: rotateY(-120deg) translateZ(380px);
+    }
+
+    .ring > .ten {
+      -webkit-transform: rotateY(-90deg) translateZ(380px);
+    }
+
+    .ring > .eleven {
+      -webkit-transform: rotateY(300deg) translateZ(380px);
+    }
+
+    .ring > .twelve {
+      -webkit-transform: rotateY(330deg) translateZ(380px);
+    }
+
+    .controls {
+      width: 80%;
+      margin: 0 auto;
+      padding: 5px 20px;
+      -webkit-border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .controls > div {
+      margin: 10px;
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8">
+    function hasClassName(inElement, inClassName)
+    {
+        var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+        return regExp.test(inElement.className);
+    }
+
+    function addClassName(inElement, inClassName)
+    {
+        if (!hasClassName(inElement, inClassName))
+            inElement.className = [inElement.className, inClassName].join(' ');
+    }
+
+    function removeClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName)) {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+            var curClasses = inElement.className;
+            inElement.className = curClasses.replace(regExp, ' ');
+        }
+    }
+
+    function toggleClassName(inElement, inClassName)
+    {
+        if (hasClassName(inElement, inClassName))
+            removeClassName(inElement, inClassName);
+        else
+            addClassName(inElement, inClassName);
+    }
+
+    function toggleShape()
+    {
+      var shape = document.getElementById('shape');
+      if (hasClassName(shape, 'ring')) {
+        removeClassName(shape, 'ring');
+        addClassName(shape, 'cube');
+      } else {
+        removeClassName(shape, 'cube');
+        addClassName(shape, 'ring');
+      }
+      
+      // Move the ring back in Z so it's not so in-your-face.
+      var stage = document.getElementById('stage');
+      if (hasClassName(shape, 'ring'))
+        stage.style.webkitTransform = 'translateZ(-200px)';
+      else
+        stage.style.webkitTransform = '';
+    }
+    
+    function toggleBackfaces()
+    {
+      var backfacesVisible = document.getElementById('backfaces').checked;
+      var shape = document.getElementById('shape');
+      if (backfacesVisible)
+        addClassName(shape, 'backfaces');
+      else
+        removeClassName(shape, 'backfaces');
+    }
+  </script>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="CSSgal">
 
-  <!-- Don't wrap targets in parent -->
-  <s id="s1"></s> 
-  <s id="s2"></s>
-  <s id="s3"></s>
-  <s id="s4"></s>
-
-  <div class="slider">
-    <div style="background:#5b8;">
-		
-		</div>
-    <div style="background:#85b;">
-			<h2>Slide 2</h2>
-		</div>
-    <div style="background:#e95;">
-			<h2>Slide 3</h2>
-		</div>
-    <div style="background:#e59;">
-			<h2>Slide 4</h2>
-		</div>
-  </div>
   
-  <div class="prevNext">
-    <div><a href="#s4"></a><a href="#s2"></a></div>
-    <div><a href="slide1.html"></a><a href="slide3.html"></a></div>
-    <div><a href="#s2"></a><a href="#s4"></a></div>
-    <div><a href="slide3.html"></a><a href="slide1.html"></a></div>
-  </div>
+  <div class="CSSgal">
 
-  <div class="bullets">
-    <a href="slide1.html">1</a>
-    <a href="#s2">2</a>
-    <a href="slide3.html">3</a>
-    <a href="#s4">4</a>
-  </div>
+    <!-- Don't wrap targets in parent -->
+    <s id="s1"></s> 
+    <s id="s2"></s>
+    <s id="s3"></s>
+    <s id="s4"></s>
+  
+    <div class="slider">
+      <div style="background:rgb(0, 0, 0);">
+              
+              <div class = "slide1Header">
+                <h1> Net.Art </h1>
+              </div>
+            
+              <div class ="container1">
+                <img src = "https://64.media.tumblr.com/3571f5ac3cffced6dd5e471af05ecadd/tumblr_inline_ohe5eaTZ7a1qz4b6v_250.gifv" >                    
+              </div>
 
-</div>
-<!-- partial -->
+              <div class = "slide1Footer">
+                <h1> Brandon (1998-99) <br> Shu Lea Cheang </h1>
+              </div>
+      </div>
+          
+      <div style="background:rgb(0, 86, 112);">
+              <div class="controls">
+                <h1>BIGDOLL</h1>
+                <p>Brandon opens with the bigdoll interface, which features a cryptic grid of images that change as the user mouses over them; 
+                    clicking reveals an underlying image, a color-separated composite drawing of a mechanically reconstructed knee.</p>
+                <p>Many of the images portray parts of human bodies, particularly genitalia, 
+                    which appear alongside fragments of newspaper clippings (“EXPOSURE,”“SHE’S A HE,” “DECEIT”), 
+                    which reflect the inflammatory language often used by the press in describing Brandon Teena’s gender identity.</code>.</p>
+                <div><button onclick="toggleShape()">Toggle Shape</button></div>
+                <div><input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked><label for="backfaces">Backfaces visible</label></div>
+              </div>
+            
+              <div id="container">
+                <div id="stage">
+                  <div id="shape" class="cube backfaces">
+                    <div class="plane one">
+                      <img src="assets/bigdoll_1.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane two">
+                      <img src="assets/bigdoll_2.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane three">
+                      <img src="assets/bigdoll_3.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane four">
+                      <img src="assets/bigdoll_4.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane five">
+                      <img src="assets/bigdoll_5.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane six">
+                      <img src="assets/bigdoll_6.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane seven">
+                      <img src="assets/bigdoll_1.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane eight">
+                      <img src="assets/bigdoll_2.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane nine">
+                      <img src="assets/bigdoll_3.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane ten">
+                      <img src="assets/bigdoll_4.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane eleven">
+                      <img src="assets/bigdoll_5.png"
+                        width="200" 
+                        height="200"> </div>
+                    <div class="plane twelve">
+                      <img src="assets/bigdoll_6.png"
+                        width="200" 
+                        height="200"> </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+      <div style="background:#e95;">
+        <div class = "slide3Header">
+          <h3> Road Trip </h3>
+      </div>
+              
+      <div class ="container3">
+          <div class = "column">
+              <h4> The road trip interface allows users to experience driving across a highway in Nebraska. Along the trip, there are various
+                   road signs and icons which reveals that there are many more tragic life stories of individuals with gender fluid identities.
+                   One of the interfaces that stood out was the web search of Brandon Teena as the road trip acts as a metaphor of Brandon's journey of finding 
+                   his identity. <br> <br> ➜
+              
+                  <a href="http://brandon.guggenheim.org/roadtrip/road.html" style="color: white"> Who is Brandon? </a>
+              </h4>
+          </div>
+          <img src = "https://d1v7jayx2s9clc.cloudfront.net/user/pages/12.brandon/brandon_roadtrip_1.gif" width = "500" height = "400">                    
+      </div>
+          </div>
+      <div style="background:#e59;">
+
+              <div class = "slide4Header">
+                <h3> Panopticon </h3>
+            </div>
+          <div class="flex-container" >  
+            <div class = "column1">
+              <h4> Brandon's panopticon interface reflected the history of criminalization of trans people.
+              </h4>
+              <img src = "assets/slide4-left.png" width = "150" height = "350">
+          </div>        
+          <div class = "column2">
+            <h4> The panopticon interface uses Jeremy Bentham's diagram of a prison optimized for surveillance as a navigational aid. 
+                <a href="http://brandon.guggenheim.org/crime/panopticon/frameset.html" style="color: white"> <br> ENTER </a>
+            </h4>
+            <img src = "assets/slide4image.png" width = "200" height = "300">
+        </div> 
+        <div class = "column3">
+          <h4> Cells link outward to images and stories of the repression faced by trans and gender-nonconforming people at the hands of the state, including historical, contemporary, and speculative examples.
+          </h4>
+          <img src = "assets/slide4-right.png" width = "150" height = "350">
+        </div>
+      </div> 
+
+
+
+          </div>
+    </div>
+    
+    <div class="prevNext">
+      <div><a href="#s4"></a><a href="#s2"></a></div>
+      <div><a href="#s1"></a><a href="#s3"></a></div>
+      <div><a href="#s2"></a><a href="#s4"></a></div>
+      <div><a href="#s3"></a><a href="#s1"></a></div>
+    </div>
+  
+    <div class="bullets">
+      <a href="#s1">1</a>
+      <a href="#s2">2</a>
+      <a href="#s3">3</a>
+      <a href="#s4">4</a>
+    </div>
+
+    
+  
+  </div>
+  <!-- partial -->
   
 </body>
 </html>

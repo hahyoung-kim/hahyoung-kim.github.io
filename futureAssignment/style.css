@@ -1,4 +1,9 @@
 /* GLOBAL STYLES */
+html{
+  cursor: url(https://cdn.custom-cursor.com/db/11469/32/cute-totoro-and-leaf-pointer.png), auto;
+
+}
+
 body {
     background: url(https://i.pinimg.com/originals/81/2b/ef/812bef685305e8bf6e8b7e54fa2012f4.gif);
     background-repeat: no-repeat;

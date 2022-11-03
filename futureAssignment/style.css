@@ -1,16 +1,17 @@
 /* GLOBAL STYLES */
 body {
-    background: url(images/blue.jpg);
-    padding-top: 16em;
+    background: url(https://i.pinimg.com/originals/81/2b/ef/812bef685305e8bf6e8b7e54fa2012f4.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 17em;
     display: flex;
     justify-content: center;
   }
   
   /* DEMO-SPECIFIC STYLES */
   .typing h1 {
-    color: rgb(70, 74, 145);
+    color: white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 1px 1px 3px white;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .10em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -30,5 +31,5 @@ body {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color:rgb(70, 74, 145); }
+    50% { border-color:white }
   }

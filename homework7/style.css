@@ -1,0 +1,16 @@
+body {
+    background: url(https://images7.alphacoders.com/738/738902.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Pangolin', cursive;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: rgb(123, 159, 255);
+    padding-top: 0.5em;
+}

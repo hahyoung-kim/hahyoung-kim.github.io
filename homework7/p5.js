@@ -1,5 +1,5 @@
 function setup(){
-    createCanvas(windowWidth,windowWidth);
+    createCanvas(windowWidth,windowHeight);
 }
 
 function mouseClicked(){
@@ -37,6 +37,5 @@ function star() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  setRadius();
 }
 

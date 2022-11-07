@@ -1,16 +1,20 @@
+@font-face { 
+    src:url(Shardee.ttf);
+    font-family: sailorMoon;
+}
+
 body {
-    background: url(https://images7.alphacoders.com/738/738902.jpg);
+    background: url(https://wallpapers.com/images/hd/pink-anime-aesthetic-sailor-city-2ajbln0421ankzxe-2ajbln0421ankzxe.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Pangolin', cursive;
 }
 
 h1{
     display: flex;
+    font-family: sailorMoon;
+    font-size: 70px;
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: rgb(123, 159, 255);
-    padding-top: 0.5em;
 }

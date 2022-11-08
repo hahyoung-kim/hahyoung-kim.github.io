@@ -11,6 +11,7 @@ function mouseDragged(){
 }
 
 function star() {
+    
 	beginShape();  
     
     pastelColor = color(random(150,255),random(150,255),random(150,255));
@@ -30,8 +31,9 @@ function star() {
 	vertex(x-23/size, y+7/size);
 	vertex(x-47/size, y-15/size);
 	vertex(x-14/size, y-20/size);
-	
     endShape(CLOSE);
+
+
 }
 
 function windowResized() {

@@ -15,8 +15,8 @@ function star() {
     
     pastelColor = color(random(150,255),random(150,255),random(150,255));
     fill(pastelColor);
-    stroke(pastelColor)
-
+    stroke(255);
+    strokeWeight(2);
     x = mouseX;
     y = mouseY;
     size = random(1,4);
@@ -32,7 +32,6 @@ function star() {
 	vertex(x-14/size, y-20/size);
 	
     endShape(CLOSE);
-
 }
 
 function windowResized() {

@@ -1,0 +1,31 @@
+.ent{
+    text-align: center;
+    margin-top: 25%;
+  }
+  
+  .myButton{
+    padding: 100px 250px;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: none;
+    font-size: 400%;
+    font-family: 'Shrikhand', cursive;
+    background-color: #e6e6e6;
+  }
+  
+  .tit{
+    font-family: 'Shrikhand', cursive;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .myButton {
+      padding: 50px 70px;
+      font-size: 100%;
+    }
+    .tit{
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 100%;
+    }
+  }
+  

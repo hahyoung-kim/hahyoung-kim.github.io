@@ -3,6 +3,13 @@
     src: url(Chalk-Regular.ttf);
 }
 
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden
+
+}
+
 .flexBox{
   display: flex;
   align-items: center;
@@ -11,20 +18,20 @@
   
 }
   
-  .myButton{
-    padding: 100px 150px;
-    margin-top: 5%;
-    border-radius: 20px;
-    font-size: 50px;
-    font-family: chalk;
-    background-color: rgb(119, 177, 190);;
-    color: white;
-  }
+.myButton{
+  padding: 100px 150px;
+  margin-top: 5%;
+  border-radius: 10px;
+  font-size: 50px;
+  font-family: chalk;
+  background-color: rgb(119, 177, 190);;
+  color: white;
+}
   
-  @media screen and (max-width: 600px) {
-    .myButton {
-      padding: 50px 70px;
-      font-size: 100%;
-    }
+@media screen and (max-width: 600px) {
+  .myButton {
+    padding: 50px 70px;
+    font-size: 100%;
   }
+}
   

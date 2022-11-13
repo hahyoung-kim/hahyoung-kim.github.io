@@ -132,6 +132,8 @@ h4{
     
 }
 
+
+
 .audio-container {
     display: flex;
     padding: 10px;
@@ -140,4 +142,11 @@ h4{
     background-color: #C8DAE0;
 }
 
+@media screen and (max-width: 600px) {
+    body {
+      padding: 50px 70px;
+      font-size: 100%;
+    }
+  }
+    
 

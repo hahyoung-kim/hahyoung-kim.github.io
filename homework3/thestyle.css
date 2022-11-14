@@ -2,24 +2,44 @@
     src:url(font/Chalk-Regular.ttf);
     font-family: chalk;
 }
+body {
+    background: url("images/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+
+}
+
+
+
+a:hover {
+    background-color: pink;
+    text-shadow: 3px 2px black;
+
+}
 
 .main {
     font-size: 150%;
     padding: 1%;
     text-align: center;
     font-family: chalk;
-    color: lightskyblue; 
+    color: white; 
 
 }
 
 #Playlist{
     display: flex;
-    align-items: center;
+    align-items: left;
     text-align: left;
-    font-size: 120%;
+    font-size: 200%;
+    text-shadow: 3px 2px black;
     padding: 7%;
     font-family: chalk;
-    color: black; 
+    color: rgb(255, 255, 255); 
     margin-right: 50px;
     padding: 5%;
 

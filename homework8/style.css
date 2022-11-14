@@ -27,7 +27,7 @@ body{
   background-color: rgb(119, 177, 190);;
   color: white;
 }
-  
+
 @media screen and (max-width: 600px) {
   .myButton {
     padding: 50px 70px;

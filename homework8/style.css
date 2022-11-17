@@ -28,6 +28,10 @@ body{
   color: white;
 }
 
+.myButton:hover{
+  color: black;
+}
+
 @media screen and (max-width: 600px) {
   .myButton {
     padding: 50px 70px;

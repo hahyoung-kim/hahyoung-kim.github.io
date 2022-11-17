@@ -1,0 +1,21 @@
+body{
+    overflow: hidden;
+}
+.flexBox{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.overlay {
+    z-index: 2; 
+    position: absolute;     
+    bottom: 390px; 
+    left: 705px; 
+    
+  }
+
+  img{
+    width: 130px; 
+    height: 130px; 
+  }

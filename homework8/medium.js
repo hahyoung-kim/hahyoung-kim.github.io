@@ -8,6 +8,7 @@ function clickButton(){
     var randomColor2 = '#'+Math.floor(Math.random()*colorMax).toString(16);
     back.style.backgroundColor = randomColor;
     theClick.style.backgroundColor = randomColor2;
+    $("#number").html(random);
 }
   const theClick = document.querySelector('.myButton');
   theClick.addEventListener('click', clickButton);

@@ -1,6 +1,4 @@
-body{
-    overflow: hidden;
-}
+
 .flexBox{
     display: flex;
     justify-content: center;
@@ -8,14 +6,24 @@ body{
 }
 
 .overlay {
-    z-index: 2; 
-    position: absolute;     
+    display: flex;
+    justify-content: center;
+    position: absolute;
     bottom: 390px; 
-    left: 705px; 
+    left: 705px;
     
-  }
+}
 
-  img{
+img{
     width: 130px; 
     height: 130px; 
   }
+
+/*button stuffs here*/
+#ig_button{
+  display: flex;
+}
+
+#ig_animation{
+  display: flex;
+}

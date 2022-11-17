@@ -3,7 +3,14 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    padding: space-between;
 }
+
+img{
+  width: 130px; 
+  height: 130px; 
+}
+
 
 .overlay {
     display: flex;
@@ -11,13 +18,27 @@
     position: absolute;
     z-index: 2;  
     bottom: 50vh; 
-    left: 46vw; 
+    left: 26vw; 
 }
 
-img{
-    width: 130px; 
-    height: 130px; 
-  }
+.overlay2 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;  
+  bottom: 50vh; 
+  left: 46vw; 
+}
+
+.overlay3 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;  
+  bottom: 50vh; 
+  left: 66vw; 
+}
+
 
 /*button stuffs here*/
 #ig_button{
@@ -25,5 +46,21 @@ img{
 }
 
 #ig_animation{
+  display: flex;
+}
+
+#twitter_button{
+  display: flex;
+}
+
+#twitter_animation{
+  display: flex;
+}
+
+#tiktok_button{
+  display: flex;
+}
+
+#tiktok_animation{
   display: flex;
 }

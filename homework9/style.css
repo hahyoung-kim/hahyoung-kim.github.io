@@ -9,9 +9,9 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 390px; 
-    left: 705px;
-    
+    z-index: 2;  
+    bottom: 50vh; 
+    left: 46vw; 
 }
 
 img{

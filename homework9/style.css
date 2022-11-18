@@ -1,6 +1,4 @@
-body{
-  background-color: rgb(199, 234, 234);
-}
+
 .flexBox{
     display: flex;
     justify-content: center;

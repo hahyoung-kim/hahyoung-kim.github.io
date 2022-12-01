@@ -1,0 +1,11 @@
+body {
+    background: url(Wireframe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(182, 176, 200);
+}

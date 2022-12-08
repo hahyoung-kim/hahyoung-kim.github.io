@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="theStyle.css">
+        <script src="theMedium.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Cozy Playlist 🎼 </title>
+
+    </head>
+
+    <body>
+        <div class="stickyHeader">
+            <br><br><br>            <br><br><br>
+
+            <div class="profilePic"><img src="images/profile.png" /></div>
+
+            <br><br><br>
+            <a href="#morning"><i class="Mornings"></i> Morning </a><br>
+
+            <a href="#noon"><i class="Noons"></i> Noon </a><br>
+
+            <a href="#afternoon"><i class="Afternoons"></i> Afternoon </a><br>
+
+            <a href="#evening"><i class="Evenings"></i> Evening </a><br>
+
+            <a href="#night"><i class="Nights"></i> Night</a><br>
+        </div>
+
+        <div class = "main">
+                <div class ="morning">
+                    <div class = "morningtexts">
+                        <h1> Polaroid Love </h1>
+                        <p> ----------------</p>
+                        <h2> ENHYPEN</h2>
+                        <div class = "morningplaying">
+                            <img src = "images/play.png" id = "icon"> 
+                        </div>
+                    </div>
+
+
+                </div>
+                <audio id = "morningSong">
+                    <source src = "polaroidlove.webm" type = "audio/mp3">
+                </audio>
+
+                <script>
+                var morningSong = document.getElementById("morningSong");
+                var icon = document.getElementById("icon");
+
+                icon.onclick = function(){
+                    if(morningSong.paused){
+                        morningSong.play();
+                        icon.src = "images/pause.png";
+                    }
+                    else{
+                        morningSong.pause();
+                        icon.src = "images/play.png";
+                    }
+                } 
+                </script>
+    </body>
+
+</html>

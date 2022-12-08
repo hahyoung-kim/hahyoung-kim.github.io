@@ -9,3 +9,9 @@ body {
     overflow: hidden;
     background-color: rgb(182, 176, 200);
 }
+
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(82, 1, 158);
+}

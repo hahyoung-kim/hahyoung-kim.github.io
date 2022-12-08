@@ -1,0 +1,78 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/night.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.profilePic {
+    height: 190px;
+    width: 190px;
+    padding-left: 30px;
+}
+
+.profilePic img {
+    height: 100%;
+    width: 100%;
+    border: #B6B2C8;
+    border-radius: 50%;
+}
+
+/* https://www.w3schools.com/howto/howto_css_sidebar_icons.asp*/
+.stickyHeader {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #403F4C;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+  
+.stickyHeader a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #B6B2C8;
+    display: block;
+    text-align: center;
+}
+  
+.stickyHeader a:hover {
+    color: #686767;
+    background-color: #BBB9D2;
+}
+  
+  
+.morning{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.morningtexts{
+    margin-top: 15vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #403F4C 1px 0 10px;
+}
+
+.morning h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.morning h2{
+    font-size: 2.5vw;
+}
+
+.morningplaying{
+    float:left;
+}
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}

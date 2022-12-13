@@ -1,25 +1,353 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(images/night.png);
+@font-face {
+    font-family: chalks;
+    src: url(fonts/Chalk-Regular.ttf);
+}
+
+/*HOME SCREEN SECTION*/
+#homeBody{
+    background-image: url(images/homeScreen.jpeg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+}
+
+.home{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.hometexts{
+    margin-top: 1vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #5f5e6a 1px 0 10px;
+    font-family: chalks;
+    font-size: 4vw;
+    line-height:0pt;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    font-family: chalks;
 
 }
+
+.wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.box{
+    border-radius: 10px;
+    transition: 1s;
+    position: relative;
+    background-color: #CBDCEA;
+    color: white;
+    text-shadow: #828caf 1px 0 10px;
+}
+
+.box:hover{
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 5px 5px 5px #6d779c;
+    position: relative;
+}
+
+.box img{
+    width:100%;
+    position: relative;
+    filter: grayscale(60%);
+}
+
+.boxTexts h1{
+    font-size: 25px;
+}
+
+.boxTexts p{
+    font-size: 21px;
+}
+
+/* side nav */
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+/* STICKY HEADER */
+/* https://www.w3schools.com/howto/howto_css_sidebar_icons.asp*/
 .profilePic {
     height: 190px;
     width: 190px;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 
 .profilePic img {
     height: 100%;
     width: 100%;
-    border: #B6B2C8;
+}
+
+
+
+/*MORNING COFFEE PLAYLIST*/
+#afternoonZZZBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/morningCoffee.jpeg);
+    background-repeat: no-repeat;
+    background-position: left 25px bottom;
+    background-size: cover;
+}
+
+.afternoonav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #492C1D;
+    overflow-x: hidden;
+    padding-top: 16px;
+
+}
+  
+.afternoonav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #F0B180;
+    display: block;
+    text-align: center;
+    font-family: chalks;
+    font-size: 25px;
+
+}
+
+/* Fade in transition: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */ 
+.afternoonav a:hover {
+    color: #492C1D;
+    background-color: #F0B180;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+  
+.afternoonav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #F0B180;
+    border-radius: 50%;
+
+}
+
+.afternoonZZZ{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;
+}
+
+.afternoonZZZtexts{
+    margin-top: 8vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #4c3f3f 1px 0 10px;
+}
+
+.afternoonZZZ h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.afternoonZZZ h2{
+    font-size: 2.5vw;
+}
+
+.afternoonZZZPlaying{
+    float:left;
+}
+
+/* Opacity: https://www.w3schools.com/css/css_image_transparency.asp*/
+.afternoonZZZPlaying img:hover {
+    opacity: 0.7;
+}
+  
+
+/*SLEEPY TEA TIME PLAYLIST*/
+#autumnRainBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/mornings.jpeg);
+    background-repeat: no-repeat;
+    background-position: left 100px bottom;
+    background-size: cover;
+}
+
+.autumnNav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3d4e49;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+  
+.autumnNav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: chalks;
+    font-size: 25px;
+}
+  
+.autumnNav a:hover {
+    color: white;
+    background-color: #8dae8c;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+  
+.autumnNav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #8dae8c;
+    border-radius: 50%;
+
+}
+ 
+.autumnRain{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.autumnRaintexts{
+    margin-top: 8vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #3d4e49 1px 0 10px;
+}
+
+.autumnRain h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.autumnRain h2{
+    font-size: 2.5vw;
+}
+
+.autumnRainPlaying{
+    float:left;
+}
+
+.autumnRainPlaying img:hover {
+    opacity: 0.7;
+}
+  
+
+
+/*IN THE CLOUDS PLAYLIST*/
+#inTheCloudsBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/travel.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.cloudNav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3EC5EA;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+  
+.cloudNav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: chalks;
+    font-size: 25px;
+}
+  
+.cloudNav a:hover {
+    color: #3EC5EA;
+    background-color: white;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+.cloudNav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #EDF9FF;
     border-radius: 50%;
 }
 
-/* https://www.w3schools.com/howto/howto_css_sidebar_icons.asp*/
-.stickyHeader {
+  
+.inTheClouds{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.inTheCloudstexts{
+    margin-top: 8vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #35a2c0 1px 0 10px;
+}
+
+.inTheClouds h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.inTheClouds h2{
+    font-size: 2.5vw;
+}
+
+.inTheCloudsPlaying{
+    float:left;
+}
+
+
+.inTheCloudsPlaying img:hover {
+    opacity: 0.7;
+}
+  
+
+
+/*LIGHTS OUT PLAYLIST*/
+#lightsOutBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/light.jpg);
+    background-repeat: no-repeat;
+    background-position: left 100px bottom;
+    background-size: cover;
+}
+
+.lightNav {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -31,48 +359,234 @@ body{
     padding-top: 16px;
 }
   
-.stickyHeader a {
+.lightNav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
     color: #B6B2C8;
     display: block;
     text-align: center;
+    font-family: chalks;
+    font-size: 25px;
 }
   
-.stickyHeader a:hover {
+.lightNav a:hover {
     color: #686767;
     background-color: #BBB9D2;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
-  
-  
-.morning{
+ 
+.lightNav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #BBB9D2;
+    border-radius: 50%;
+
+}
+ 
+.lightsOut{
     display:flex;
     justify-items:left;
     flex-direction: column;
     align-items:center;;
 }
 
-.morningtexts{
-    margin-top: 15vh;
+.lightsOuttexts{
+    margin-top: 8vh;
     text-align: left;
     color: rgb(255, 255, 255);
     text-shadow: #403F4C 1px 0 10px;
 }
 
-.morning h1{
+.lightsOut h1{
     font-size: 6.5vw;
     line-height:0pt;
 }
 
-.morning h2{
+.lightsOut h2{
     font-size: 2.5vw;
 }
 
-.morningplaying{
+.lightsOutplaying{
     float:left;
 }
-@media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
+
+
+.lightsOutplaying img:hover {
+    opacity: 0.7;
 }
+  
+
+
+/*DREAM LANDPLAYLIST*/
+#dreamLandBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/dreams.jpeg);
+    background-position: left 100px bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.dreamNav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #F7D5E6;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+  
+.dreamNav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #a06491;
+    display: block;
+    text-align: center;
+    font-family: chalks;
+    font-size: 25px;
+}
+  
+.dreamNav a:hover {
+    color: white;
+    background-color: 	#E8A9D8;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+  
+.dreamLand{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.dreamNav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #E8A9D8;
+    border-radius: 50%;
+
+}
+
+.dreamLandtexts{
+    margin-top: 8vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #E8A9D8 1px 0 10px;
+}
+
+.dreamLand h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.dreamLand h2{
+    font-size: 2.5vw;
+}
+
+.dreamLandplaying{
+    float:left;
+}
+
+
+.dreamLandplaying img:hover {
+    opacity: 0.7;
+}
+  
+
+
+/*SUMMER RAIN PLAYLIST*/
+#snowyDayBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/snow.jpeg);
+    background-repeat: no-repeat;
+    background-position: left 200px bottom ;
+    background-size: cover;
+}
+
+.snowNav{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #BCB3AC;
+    overflow-x: hidden;
+    padding-top: 16px;
+}
+  
+.snowNav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #F3F8FA;
+    display: block;
+    text-align: center;
+    font-family: chalks;
+    font-size: 25px;
+}
+  
+.snowNav a:hover {
+    color: #BCB3AC;
+    background-color: 	#F3F8FA;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+  
+.snowyDay{
+    display:flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;;
+}
+
+.snowNav img {
+    height: 100%;
+    width: 100%;
+    border: 7px solid #F3F8FA;
+    border-radius: 50%;
+
+}
+
+.snowyDaytexts{
+    margin-top: 8vh;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: #887669 1px 0 10px;
+}
+
+.snowyDay h1{
+    font-size: 6.5vw;
+    line-height:0pt;
+}
+
+.snowyDay h2{
+    font-size: 2.5vw;
+}
+
+.snowyDayplaying{
+    float:left;
+}
+
+
+.snowyDayplaying img:hover {
+    opacity: 0.7;
+}
+  
+
+
+
+@media screen and (max-width: 600px) {
+    #homeBody {
+      padding: 50px 70px;
+      font-size: 100%;
+    }
+}
+    
